@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00449E;
+  --color-background-light: #f3f4f6;
+  --color-background-dark: #111827;
+  --color-light-blue: #4DADDA;
+
+  --font-display: Roboto, sans-serif;
+
+  --radius: 0.5rem;
+  --trapezoid-top-rounded: 'polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%)'
+}
