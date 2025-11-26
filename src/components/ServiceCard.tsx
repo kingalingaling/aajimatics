@@ -1,4 +1,12 @@
-const ServiceCard = ({ title, icon }) => (
+import type { ReactNode } from "react";
+
+const ServiceCard = ({
+  title,
+  icon,
+}: {
+  title: string;
+  icon: ReactNode;
+}) => (
   <div className="bg-[#1e60a6] dark:bg-blue-900 rounded-lg p-6 h-48 flex flex-col justify-between shadow-lg hover:scale-[1.02] transition-transform cursor-default">
     <div className="text-white w-12 h-12">
       <svg
@@ -14,4 +22,4 @@ const ServiceCard = ({ title, icon }) => (
   </div>
 );
 
-export default ServiceCard
+export default ServiceCard;

@@ -1,4 +1,6 @@
-const ProjectCard = ({ text, icon }) => (
+import type { ReactNode } from "react";
+
+const ProjectCard = ({ text, icon }: {text: string; icon: ReactNode}) => (
   <div className="bg-gray-200 dark:bg-gray-800 p-5 rounded-xl flex items-center shadow-sm">
     <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center w-12 h-12">
       <svg
