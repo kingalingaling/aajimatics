@@ -7,9 +7,9 @@ interface Solution {
   imageAlt: string;
   details: string;
   color: string; // Dynamic hex code (e.g., "#0b1a3e")
+  link: string;
 
   // Optional properties
-  link: string | null;
   offeringsTitle?: string;
   offerings: string[] | null;
 }
@@ -65,15 +65,12 @@ const Solution: React.FC<Solution> = ({
           </div>
         )}
 
-        {/* Conditional Link */}
-        {link && (
-          <a
-            className="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center"
-            href={link}
-          >
-            Learn More <span className="ml-2">→</span>
-          </a>
-        )}
+        <a
+          className="font-semibold text-white hover:text-cyan-500 transition-colors inline-flex items-center"
+          href={link}
+        >
+          Learn More <span className="ml-2">→</span>
+        </a>
       </div>
     </div>
   );

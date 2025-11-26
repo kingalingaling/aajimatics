@@ -39,7 +39,7 @@ export const SITE_DATA = {
       imageAlt: "Abstract graphic for bespoke solutions",
       details:
         "We don't believe in one-size-fits-all technology. Our BeSpoke Solutions unit works with you to design and deploy systems built precisely for your business goals — whether it's a workflow automation engine, an enterprise portal, or an integrated payments platform.",
-      link: "#",
+      link: "/bespoke-solutions",
       color: "#010721",
       offerings: null, // Used for items that don't have a bulleted list
     },
@@ -51,7 +51,7 @@ export const SITE_DATA = {
       imageAlt: "Padlock graphic for cybersecurity",
       details:
         "Protect your business with proactive, end-to-end cyber defense services.",
-      link: null, // No primary link on this card
+      link: '/cybersecurity', // No primary link on this card
       color: "#000102",
       offeringsTitle: "Our offerings include:",
       offerings: [
@@ -72,7 +72,7 @@ export const SITE_DATA = {
       imageAlt: "Security shield graphic for cyber insurance",
       details:
         "We help businesses quantify, mitigate, and insure against digital risks. Our cyber-risk assessment engine and partnerships with insurers ensure coverage that matches your real-world exposure.",
-      link: null,
+      link: '/cyber-insurance',
       color: "#060845",
       offerings: null,
     },
@@ -84,7 +84,7 @@ export const SITE_DATA = {
       imageAlt: "Cityscape with digital overlays for GovTech",
       details:
         "We collaborate with governments and agencies to build secure, citizen-centric digital ecosystems. From complaint-management systems to data-driven policymaking tools, we redefine public sector efficiency.",
-      link: null,
+      link: '/gov-tech',
       color: "#02183D",
       offerings: null,
     },
@@ -96,7 +96,7 @@ export const SITE_DATA = {
       imageAlt: "Cloud computing graphic for digital transformation",
       details:
         "Guiding organizations through every phase of digital modernization — from process automation to cloud migration — ensuring agility, resilience, and innovation.",
-      link: null,
+      link: '/digital-transformation',
       color: "#15236B",
       offerings: null,
     },
@@ -108,7 +108,7 @@ export const SITE_DATA = {
       imageAlt: "Android robot with data graphics for AI",
       details:
         "Harness data for smarter decisions. We design AI-driven analytics systems and predictive models that turn data into actionable insights — securely and ethically.",
-      link: null,
+      link: '/data-and-ai',
       color: "#00449E",
       offerings: null,
     },
@@ -130,6 +130,151 @@ export const SITE_DATA = {
       id: "part3",
       alt:"Nigerian Council of Registered Insurance Brokers logo",
       imageSrc: "/assets/images/partners/insurance-brokers.png"
+    }
+  ],
+
+  corePartners:[
+    {
+      id: "cp1",
+      name:"NDPC",
+      logo: "/assets/images/partners/core-partners/NDPC.jpg"
+    },
+    {
+      id: "cp2",
+      name:"NITDA",
+      logo: "/assets/images/partners/core-partners/NITDA.png"
+    },
+    {
+      id: "cp3",
+      name:"Business France",
+      logo: "/assets/images/partners/core-partners/business-france.png"
+    },
+    {
+      id: "cp4",
+      name:"NAICOM",
+      logo: "/assets/images/partners/core-partners/NAICOM.png"
+    },
+    {
+      id: "cp5",
+      name:"NCRIB",
+      logo: "/assets/images/partners/core-partners/NCRIB.png"
+    },
+    {
+      id: "cp6",
+      name:"CIIN",
+      logo: "/assets/images/partners/core-partners/CIIN.jpg"
+    }
+  ],
+
+  regPartners:[
+    {
+      id: "rp1",
+      name:"MIP",
+      logo: "/assets/images/partners/partners/mip.jpg"
+    },
+    {
+      id: "rp2",
+      name:"Uniswitch",
+      logo: "/assets/images/partners/partners/uniswitch.png"
+    },
+    {
+      id: "rp3",
+      name:"YOA",
+      logo: "/assets/images/partners/partners/yoa.png"
+    }
+  ],
+  clients:[
+    {
+      id: "cl1",
+      name:"Comercio Partners",
+      logo: "/assets/images/clients/comercio-partner.png"
+    },
+    {
+      id: "cl2",
+      name:"UCH Ibadan",
+      logo: "/assets/images/clients/UCH-ibadan.png"
+    },
+    {
+      id: "cl3",
+      name:"Fidelity Pension Managers",
+      logo: "/assets/images/clients/fidelity.png"
+    },
+    {
+      id: "cl4",
+      name:"Citizens Pension",
+      logo: "/assets/images/clients/citizens-pension.png"
+    },
+    {
+      id: "cl5",
+      name:"Cardinal Stone Pensions",
+      logo: "/assets/images/clients/cardinal-stone-pension.png"
+    },
+    {
+      id: "cl6",
+      name:"Cornerstone",
+      logo: "/assets/images/clients/cornerstone.png"
+    },
+    {
+      id: "cl7",
+      name:"AXA Mansard",
+      logo: "/assets/images/clients/mansard.png"
+    },
+    {
+      id: "cl8",
+      name:"LIRS",
+      logo: "/assets/images/clients/LIRS.jpg"
+    },
+    {
+      id: "cl9",
+      name:"Justice and Progress",
+      logo: "/assets/images/clients/justice-and-progress.png"
+    },
+    {
+      id: "cl10",
+      name:"First Guaranty",
+      logo: "/assets/images/clients/first-guaranty.jpeg"
+    },
+  ],
+  brands:[
+    {
+      id: "br1",
+      name:"Verifimi",
+      logo: "/assets/images/brands/verifimi.jpg"
+    },
+    {
+      id: "br2",
+      name:"Smart Blue",
+      logo: "/assets/images/brands/smart-blue.jpg"
+    },
+    {
+      id: "br3",
+      name:"Smart Blue Pay",
+      logo: "/assets/images/brands/smart-blue-pay.jpg"
+    },
+    {
+      id: "br4",
+      name:"CIDA",
+      logo: "/assets/images/brands/cida.png"
+    },
+    {
+      id: "br5",
+      name:"DIDA",
+      logo: "/assets/images/brands/dida.png"
+    },
+    {
+      id: "br6",
+      name:"CIDT",
+      logo: "/assets/images/brands/cidt.png"
+    },
+    {
+      id: "br7",
+      name:"FPDA",
+      logo: "/assets/images/brands/fpda.png"
+    },
+    {
+      id: "br8",
+      name:"Aijilytics",
+      logo: "/assets/images/brands/aijilytics.jpg"
     }
   ]
 
