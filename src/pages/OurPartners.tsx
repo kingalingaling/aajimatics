@@ -5,7 +5,7 @@ import PartnerCard from "../components/PartnerCard";
 
 const OurPartners = () => {
   return (
-    <div className="font-display bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+    <div className="font-display bg-gray-50 min-h-screen flex flex-col">
       <Navbar />
 
       {/* Main Content Wrapper */}
@@ -16,10 +16,10 @@ const OurPartners = () => {
           
           {/* Header Text */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#155e9e] dark:text-white mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#155e9e] mb-6">
               Core Institutional Partners
             </h1>
-            <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
               Our success is powered by strategic alliances with regulators,
               insurers, cloud providers, and research institutions. We collaborate
               with industry-leading organizations to deliver excellence,
@@ -41,7 +41,7 @@ const OurPartners = () => {
           
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#155e9e] dark:text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#155e9e]">
               Partners
             </h2>
           </div>

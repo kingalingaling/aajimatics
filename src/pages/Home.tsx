@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     // Root container
-    <div className="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+    <div className="font-display bg-background-light text-gray-800 ">
       <Navbar />
 
       {/* 1. HERO SECTION (Remains Opaque/Separate) */}
@@ -43,7 +43,7 @@ const Home = () => {
             </a>
             <a
               className="bg-white backdrop-blur-sm text-black font-bold px-8 py-3 rounded-lg text-base hover:bg-white/70 duration-200"
-              href="mailto:cyber@aajimatics.com"
+              href="#"
             >
               Talk to an Expert
             </a>
@@ -54,7 +54,7 @@ const Home = () => {
         <div
           className="
             w-full md:w-[50%] lg:w-[40%] mx-auto h-16 md:h-20 
-            bg-white dark:bg-gray-900 
+            bg-white
             absolute bottom-0 z-20 
             [clip-path:polygon(15%_0%,85%_0%,100%_100%,0%_100%)]
             flex justify-center items-center text-primary font-bold text-xl md:text-2xl lg:text-3xl
@@ -65,13 +65,13 @@ const Home = () => {
       </section>
 
       {/* 2. BODY CONTENT WRAPPER (Glows live here) */}
-      <div className="relative overflow-hidden bg-white dark:bg-gray-900">
+      <div className="relative overflow-hidden bg-white">
         {/* Glow 1: Top Right (Blue/Purple Gradient) */}
         <div
           className="absolute top-0 right-0 -mr-[100px] -mt-[50px] w-[600px] h-[600px] rounded-full blur-[150px] opacity-30 pointer-events-none z-0"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom left, #3B82F6, #9333EA)",
+              "linear-gradient(to bottom left, #79a7f2, #9333EA)",
           }}
         />
 
@@ -107,7 +107,7 @@ const Home = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
               <div className="text-center lg:text-left lg:col-span-3">
-                <p className="mt-6 text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
                   We are a technology and cybersecurity company driven by
                   innovation, integrity, and impact. Our mission is to help
                   businesses, governments, and institutions stay resilient in a
@@ -163,12 +163,12 @@ const Home = () => {
         {/* Partners */}
         <section className="md:px-16 relative z-10 bg-transparent">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="border border-gray-300 dark:border-gray-700 rounded-2xl backdrop-blur-md bg-white/40 dark:bg-gray-800/40 p-8 md:p-12 text-center">
+            <div className="border border-gray-300 rounded-2xl backdrop-blur-md bg-white/40 p-8 md:p-12 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">
                 Partners
               </h2>
               {/* ... content ... */}
-              <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
                 Our success is powered by strategic alliances with regulators,
                 insurers, cloud providers, and research institutions. We
                 collaborate with industry-leading organizations to deliver
@@ -214,10 +214,10 @@ const Home = () => {
               </div>
               <div className="rounded-xl p-4 md:p-12 flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-4/5 text-center lg:text-left">
-                  <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white">
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary">
                     Careers
                   </h2>
-                  <p className="mt-4 text-gray-700 dark:text-gray-300">
+                  <p className="mt-4 text-gray-700">
                     Join a team of innovators shaping Africa's digital future.
                     We're always looking for passionate minds in cybersecurity,
                     cloud engineering, software development, and data science.

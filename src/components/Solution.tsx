@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface Solution {
   id: string;
@@ -65,12 +66,12 @@ const Solution: React.FC<Solution> = ({
           </div>
         )}
 
-        <a
+        <Link
           className="font-semibold text-white hover:text-cyan-500 transition-colors inline-flex items-center"
-          href={link}
+          to={link}
         >
           Learn More <span className="ml-2">→</span>
-        </a>
+        </Link>
       </div>
     </div>
   );

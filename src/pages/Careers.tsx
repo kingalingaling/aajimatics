@@ -4,7 +4,7 @@ import careersHero from "../assets/images/contact-hero.webp"; // Replace with a 
 
 const Careers = () => {
   return (
-    <div className="font-display bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+    <div className="font-display bg-gray-50 min-h-screen flex flex-col">
       <Navbar />
 
       {/* Main Content Wrapper */}
@@ -32,10 +32,10 @@ const Careers = () => {
 
         {/* 2. Intro / Culture Text */}
         <div className="container mx-auto max-w-4xl text-center mt-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
             Join the future of digital security.
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-600 text-lg leading-relaxed">
             At Aajimatics, we aren't just building software; we are building the
             trust infrastructure for Africa's digital economy. We look for
             passionate minds in cybersecurity, cloud engineering, and data
@@ -45,9 +45,9 @@ const Careers = () => {
 
         {/* 3. Current Openings Status (Not Hiring) */}
         <div className="container mx-auto max-w-3xl mt-20">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-10 md:p-16 text-center border border-gray-100 dark:border-gray-700">
+          <div className="bg-white rounded-2xl shadow-xl p-10 md:p-16 text-center border border-gray-100 dark:border-gray-700">
             {/* Icon */}
-            <div className="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg
                 className="w-10 h-10 text-gray-500 dark:text-gray-300"
                 fill="none"
@@ -63,11 +63,11 @@ const Careers = () => {
               </svg>
             </div>
 
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
               No open positions right now
             </h3>
 
-            <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto">
+            <p className="text-gray-600 mb-8 max-w-lg mx-auto">
               We currently don't have any active job listings, but we are always
               keen to meet exceptional talent. As we continue to scale, new
               opportunities in engineering, security audit, and product
@@ -75,11 +75,11 @@ const Careers = () => {
             </p>
 
             {/* Call to Action - Talent Pool 
-            <div className="bg-[#f0f9ff] dark:bg-blue-900/20 p-6 rounded-xl border border-blue-100 dark:border-blue-900/30">
-              <h4 className="text-lg font-semibold text-[#155e9e] dark:text-cyan-400 mb-2">
+            <div className="bg-[#f0f9ff] p-6 rounded-xl border border-blue-100 dark:border-blue-900/30">
+              <h4 className="text-lg font-semibold text-[#155e9e] mb-2">
                 Don't wait for a posting
               </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-sm text-gray-600 mb-4">
                 Send your CV and a brief introduction to our HR team. We'll keep
                 you on our radar for future roles that match your expertise.
               </p>

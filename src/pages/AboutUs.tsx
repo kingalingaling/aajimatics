@@ -100,7 +100,7 @@ const AboutUs = () => {
             <p>
               Incorporated in 2010, AAJIMATICS has been developing its
               electronic systems and solutions and is now providing technology
-              solutions and expertise to a varied client group in Nigeria.
+              solutions and expertise to a varied client group.
               AAJIMATICS is an electronic technologies solutions and services
               firm; combined, we direct these two areas of expertise to deliver
               ePlatforms for both established and growing markets. Clients
@@ -119,14 +119,14 @@ const AboutUs = () => {
         </div>
 
         {/* 3. Mission Statement Section */}
-        <div className="container mx-auto max-w-5xl mt-20">
+        {/* <div className="container mx-auto max-w-5xl mt-20">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 border-l-8 border-[#155e9e]">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-8">
               Mission Statement
-            </h2>
+            </h2> */}
             
             {/* The Quote */}
-            <blockquote className="text-xl md:text-2xl font-medium italic text-gray-700 dark:text-gray-200 mb-8 relative">
+            {/* <blockquote className="text-xl md:text-2xl font-medium italic text-gray-700 dark:text-gray-200 mb-8 relative">
               <span className="text-4xl text-gray-300 absolute -top-4 -left-2">“</span>
               To be the leading catalyst in the optimal adoption, implementation
               and utilization of eHealth applications by institutions involved
@@ -149,7 +149,7 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* 4. Core Values Section */}
         <div className="container mx-auto max-w-6xl mt-24">

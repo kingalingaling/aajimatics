@@ -5,7 +5,7 @@ import aiHero from "/assets/images/solutions/sol6.webp"; // Replace with your AI
 
 const DataAndAI = () => {
   return (
-    <div className="font-display bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+    <div className="font-display bg-gray-50 min-h-screen flex flex-col">
       <Navbar />
 
       {/* Main Content Wrapper */}
@@ -34,10 +34,10 @@ const DataAndAI = () => {
 
         {/* 2. Introduction Text */}
         <div className="container mx-auto max-w-4xl text-center mt-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
             Turning data into decisions.
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-600 text-lg leading-relaxed">
             We design intelligent systems that make sense of complexity —
             combining analytics, automation, and AI to drive innovation. Our
             data science and AI team enables clients to predict trends, detect
@@ -47,7 +47,7 @@ const DataAndAI = () => {
 
         {/* 3. "What we've done" Section */}
         <div className="container mx-auto max-w-5xl mt-20">
-          <h3 className="text-xl font-bold text-center text-gray-800 dark:text-white mb-10">
+          <h3 className="text-xl font-bold text-center text-gray-800 mb-10">
             What we've done:
           </h3>
 

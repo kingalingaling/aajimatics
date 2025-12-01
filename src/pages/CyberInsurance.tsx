@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"; // Adjust path as needed
 import Footer from "../components/Footer"; // Adjust path as needed
+import cidaLogo from "../assets/images/cida-logo.png"
 
 const CyberInsurance = () => {
   return (
@@ -13,14 +14,15 @@ const CyberInsurance = () => {
           <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-2xl bg-[#0b1a3e]">
             {/* Background Image with Overlay */}
             <img
-              src="/assets/images/solutions/cida.jpeg"
+              src="/assets/images/solutions/sol3.webp"
               alt="Cyber Insurance Background"
               className="absolute inset-0 w-full h-full object-cover opacity-40"
             />
             <div className="absolute inset-0 bg-linear-to-r from-[#0b1a3e]/80 to-transparent mix-blend-multiply"></div>
 
             {/* Centered Title */}
-            <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+              <img src={cidaLogo} className="h-[70px] w-auto mb-2" alt="" />
               <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
                 Cyber Insurance (CIDA Platform)
               </h1>

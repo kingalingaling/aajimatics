@@ -7,7 +7,7 @@ import franceFlag from "../assets/france-flag.png"; // Reusing from footer
 
 const ContactUs = () => {
   return (
-    <div className="font-display bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+    <div className="font-display bg-gray-50 min-h-screen flex flex-col">
       <Navbar />
 
       {/* Main Content Wrapper */}

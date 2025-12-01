@@ -5,7 +5,7 @@ import PartnerCard from "../components/PartnerCard";
 
 const Clients = () => {
   return (
-    <div className="font-display bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+    <div className="font-display bg-gray-50 min-h-screen flex flex-col">
       <Navbar />
 
       {/* Main Content Wrapper */}
@@ -16,7 +16,7 @@ const Clients = () => {
           
           {/* Header Text */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#155e9e] dark:text-white mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#155e9e] mb-6">
               Our Clients
             </h1>
           </div>
