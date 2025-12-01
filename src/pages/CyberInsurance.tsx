@@ -4,7 +4,7 @@ import cidaLogo from "../assets/images/cida-logo.png"
 
 const CyberInsurance = () => {
   return (
-    <div className="font-display bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+    <div className="font-display bg-gray-50 min-h-screen flex flex-col">
       <Navbar />
 
       {/* Main Content Wrapper - Add padding top to account for fixed Navbar */}
@@ -32,10 +32,10 @@ const CyberInsurance = () => {
 
         {/* 2. Introduction Text */}
         <div className="container mx-auto max-w-4xl text-center mt-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
             Quantify risk. Protect your future.
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-600 leading-relaxed">
             Cyber Insurance by Aajimatics bridges the gap between cybersecurity
             and financial protection. Through CIDA (Cyber Insurance & Domain
             Assessment), we assess, score, and benchmark your cyber maturity
@@ -46,13 +46,13 @@ const CyberInsurance = () => {
 
         {/* 3. "What we've done" Section */}
         <div className="container mx-auto max-w-5xl mt-20">
-          <h3 className="text-xl font-bold text-center text-gray-800 dark:text-white mb-10">
+          <h3 className="text-xl font-bold text-center text-gray-800 mb-10">
             What we've done:
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Card 1 */}
-            <div className="bg-gray-200 dark:bg-gray-800 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: Computer/Dashboard */}
                 <svg
@@ -69,13 +69,13 @@ const CyberInsurance = () => {
                   />
                 </svg>
               </div>
-              <p className="ml-4 text-gray-700 dark:text-gray-200 font-medium text-sm md:text-base">
+              <p className="ml-4 text-gray-700 font-medium text-sm md:text-base">
                 CIDA has been used to evaluate over 50+ organizations for cyber-risk scoring
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-gray-200 dark:bg-gray-800 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: Security Shield */}
                 <svg
@@ -92,13 +92,13 @@ const CyberInsurance = () => {
                   />
                 </svg>
               </div>
-              <p className="ml-4 text-gray-700 dark:text-gray-200 font-medium text-sm md:text-base">
+              <p className="ml-4 text-gray-700 font-medium text-sm md:text-base">
                 Supported underwriters in policy pricing using real-time assessment data
               </p>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-gray-200 dark:bg-gray-800 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: API/Integration */}
                 <svg
@@ -115,7 +115,7 @@ const CyberInsurance = () => {
                   />
                 </svg>
               </div>
-              <p className="ml-4 text-gray-700 dark:text-gray-200 font-medium text-sm md:text-base">
+              <p className="ml-4 text-gray-700 font-medium text-sm md:text-base">
                 Cloud security validation for fintech startups
               </p>
             </div>
