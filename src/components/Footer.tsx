@@ -1,12 +1,15 @@
+import { Link } from "react-router-dom"; // 1. Import Link
 import compliance from "../assets/audit-compliance.png";
 import franceFlag from "../assets/france-flag.png";
 import canadaFlag from "../assets/canada-flag.png";
 import nigeriaFlag from "../assets/nigeria-flag.png";
+
 const Footer = () => {
   return (
     <footer className="text-white md:px-16 bg-linear-to-br from-[#15236B] via-[#0077E6] to-[#15236B] relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* LOGO & ADDRESS COLUMN */}
           <div className="col-span-1 md:col-span-1">
             <img
               alt="Aajimatics Technologies white logo"
@@ -32,70 +35,103 @@ const Footer = () => {
               <img alt="French flag" className="w-5 h-auto" src={franceFlag} />
             </div>
             <p className="text-sm text-gray-100">
-              McMaster Innovation Park, 305 - 175 Longwood RD South Hamilton, ON
-              L8P0A1 Canada
+              Aajimatics <br />
+              McMaster Innovation Park <br />
+              305-175 Longwood Rd South <br />
+              Hamilton, ON L8P 0A1 <br /> Canada
             </p>
           </div>
+
+          {/* SERVICES COLUMN */}
           <div>
             <h4 className="font-bold text-lg mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-gray-100">
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/bespoke-solutions"
+                >
                   BeSpoke Solutions
-                </a>
+                </Link>
               </li>
               <li>
+                {/* No specific route for Disruptive Tech category page, keeping as hash or could link to main service */}
                 <a className="hover:text-cyan-400 duration-100" href="#">
                   Disruptive Technologies
                 </a>
               </li>
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/cybersecurity"
+                >
                   Cybersecurity
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/cyber-insurance"
+                >
                   Cyber Insurance
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/gov-tech"
+                >
                   GovTech
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/digital-transformation"
+                >
                   Digital Transformation
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/tech-for-financial-services"
+                >
                   Technology for Financial Services
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
+
+          {/* COMPANY COLUMN */}
           <div>
             <h4 className="font-bold text-lg mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-gray-100">
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link className="hover:text-cyan-400 duration-100" to={"/about"}>
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/careers"
+                >
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="hover:text-cyan-400 duration-100" href="#">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/contact"
+                >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
+
+          {/* LEGAL COLUMN */}
           <div>
             <h4 className="font-bold text-lg mb-4">Legal &amp; Compliance</h4>
             <ul className="space-y-2 text-sm text-gray-100">
@@ -112,6 +148,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
+        {/* BOTTOM BAR */}
         <div className="mt-12 border-t border-white/20 pt-8 text-center lg:text-left flex flex-col lg:flex-row justify-between text-sm text-white">
           <p>© 2025 Aajimatics. All rights reserved.</p>
           <p className="mb-2">

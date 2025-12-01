@@ -13,7 +13,7 @@ const CyberInsurance = () => {
           <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-2xl bg-[#0b1a3e]">
             {/* Background Image with Overlay */}
             <img
-              src="/assets/images/solutions/sol3.webp"
+              src="/assets/images/solutions/cida.jpeg"
               alt="Cyber Insurance Background"
               className="absolute inset-0 w-full h-full object-cover opacity-40"
             />
@@ -68,7 +68,7 @@ const CyberInsurance = () => {
                 </svg>
               </div>
               <p className="ml-4 text-gray-700 dark:text-gray-200 font-medium text-sm md:text-base">
-                CIDA used to evaluate over 50+ organizations for cyber-risk scoring
+                CIDA has been used to evaluate over 50+ organizations for cyber-risk scoring
               </p>
             </div>
 

@@ -234,6 +234,11 @@ export const SITE_DATA = {
       name:"First Guaranty",
       logo: "/assets/images/clients/first-guaranty.jpeg"
     },
+    {
+      id: "cl11",
+      name:"FGI",
+      logo: "/assets/images/clients/fgi.jpg"
+    },
   ],
   brands:[
     {

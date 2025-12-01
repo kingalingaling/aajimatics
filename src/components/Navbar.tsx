@@ -1,8 +1,45 @@
-import { Link } from "react-router-dom"; // Import Link for SPA navigation
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+// Define the precise types for your menu structure
+type TopKey = "who" | "explore" | null;
+type ExploreKey = "disruptive" | "fintech" | null;
+
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Nested State Structure
+  const [activeTop, setActiveTop] = useState<TopKey>(null);
+  const [activeExploreChild, setActiveExploreChild] =
+    useState<ExploreKey>(null);
+
+  const location = useLocation();
+
+  // Close everything when route changes
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveTop(null);
+    setActiveExploreChild(null);
+  }, [location.pathname]);
+
+  // Toggle Top-Level Menus (Who We Are / Explore)
+  const toggleTop = (key: TopKey) => {
+    setActiveTop((prev) => {
+      if (prev === key || (prev === "explore" && key !== "explore")) {
+        setActiveExploreChild(null);
+      }
+      return prev === key ? null : key;
+    });
+  };
+
+  // Toggle Nested Explore Menus (Disruptive / Fintech)
+  const toggleExploreChild = (key: ExploreKey) => {
+    setActiveExploreChild((prev) => (prev === key ? null : key));
+  };
+
   return (
-    <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-700">
+    <header className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-700 font-display">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* LOGO */}
@@ -16,7 +53,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* DESKTOP NAV */}
+          {/* ================= DESKTOP NAVIGATION ================= */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors font-medium"
@@ -25,19 +62,17 @@ const Navbar = () => {
               Home
             </Link>
 
-            {/* --- DROPDOWN 1: Who We Are --- */}
+            {/* Desktop: Who We Are */}
             <div className="relative group h-20 flex items-center">
-              <button className="flex items-center text-gray-700 dark:text-gray-300 group-hover:text-primary dark:group-hover:text-cyan-400 transition-colors font-medium">
+              <button className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors font-medium">
                 Who We Are
                 <span className="material-icons-outlined text-sm ml-1 group-hover:rotate-180 transition-transform duration-200">
                   expand_more
                 </span>
               </button>
-
-              {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 w-56 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out">
+              {/* Dropdown */}
+              <div className="absolute top-full left-0 w-56 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
                 <div className="absolute -top-4 left-0 w-full h-4 bg-transparent"></div>
-
                 <div className="p-2">
                   <Link
                     to="/our-partners"
@@ -51,25 +86,29 @@ const Navbar = () => {
                   >
                     Clientele
                   </Link>
+                  <Link
+                    to="/about"
+                    className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors"
+                  >
+                    About Us
+                  </Link>
                 </div>
               </div>
             </div>
 
-            {/* --- DROPDOWN 2: Explore Aajimatics --- */}
+            {/* Desktop: Explore Aajimatics */}
             <div className="relative group h-20 flex items-center">
-              <button className="flex items-center text-gray-700 dark:text-gray-300 group-hover:text-primary dark:group-hover:text-cyan-400 transition-colors font-medium">
+              <button className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors font-medium">
                 Explore Aajimatics
                 <span className="material-icons-outlined text-sm ml-1 group-hover:rotate-180 transition-transform duration-200">
                   expand_more
                 </span>
               </button>
 
-              {/* Main Dropdown Menu */}
-              <div className="absolute top-full left-0 w-72 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out">
+              {/* Main Dropdown */}
+              <div className="absolute top-full left-0 w-72 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
                 <div className="absolute -top-4 left-0 w-full h-4 bg-transparent"></div>
-
-                <div className="p-2">
-                  {/* Item with no sub-menu */}
+                <div className="p-2 relative">
                   <Link
                     to="/bespoke-solutions"
                     className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors"
@@ -77,16 +116,16 @@ const Navbar = () => {
                     BeSpoke Solutions
                   </Link>
 
-                  {/* --- SUB-DROPDOWN 1: Disruptive Technologies --- */}
+                  {/* Desktop Nested: Disruptive Tech */}
                   <div className="relative group/submenu">
-                    <button className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors">
+                    <button className="flex justify-between items-center w-full px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors">
                       Disruptive Technologies
-                      <span className="material-icons-outlined text-sm ml-2 group-hover/submenu:text-primary dark:group-hover/submenu:text-cyan-400">
+                      <span className="material-icons-outlined text-sm ml-2">
                         chevron_right
                       </span>
                     </button>
-                    {/* Sub-menu content */}
-                    <div className="absolute top-0 left-full ml-2 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible translate-x-2 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:translate-x-0 transition-all duration-300 ease-out">
+                    {/* Nested Submenu */}
+                    <div className="absolute -top-2 left-full ml-1 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible translate-x-2 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:translate-x-0 transition-all duration-300 ease-out z-50">
                       <div className="p-2">
                         <Link
                           to="/cybersecurity"
@@ -110,19 +149,18 @@ const Navbar = () => {
                           to="/data-and-ai"
                           className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors"
                         >
-                          Data & Artificial Intelligence
+                          Data & AI
                         </Link>
                         <Link
                           to="/distributed-ledger-technology"
                           className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors"
                         >
-                          Distributed Ledger Technologies
+                          DLT
                         </Link>
                       </div>
                     </div>
                   </div>
 
-                  {/* Item with no sub-menu */}
                   <Link
                     to="/digital-transformation"
                     className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors"
@@ -130,22 +168,21 @@ const Navbar = () => {
                     Digital Transformation
                   </Link>
 
-                  {/* --- SUB-DROPDOWN 2: Technology for Financial Services --- */}
+                  {/* Desktop Nested: Financial Services */}
                   <div className="relative group/submenu">
-                    {/* Made this clickable as it has a specific route */}
                     <Link
                       to="/tech-for-financial-services"
-                      className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors"
+                      className="flex justify-between items-center w-full px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors"
                     >
                       <span className="text-left">
-                        Technology for Financial Services
+                        Tech for Financial Services
                       </span>
-                      <span className="material-icons-outlined text-sm ml-2 group-hover/submenu:text-primary dark:group-hover/submenu:text-cyan-400">
+                      <span className="material-icons-outlined text-sm ml-2">
                         chevron_right
                       </span>
                     </Link>
-                    {/* Sub-menu content */}
-                    <div className="absolute top-0 left-full ml-2 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible translate-x-2 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:translate-x-0 transition-all duration-300 ease-out">
+                    {/* Nested Submenu */}
+                    <div className="absolute -top-2 left-full ml-1 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible translate-x-2 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:translate-x-0 transition-all duration-300 ease-out z-50">
                       <div className="p-2">
                         <Link
                           to="/insurance"
@@ -168,6 +205,13 @@ const Navbar = () => {
                       </div>
                     </div>
                   </div>
+
+                  <Link
+                    to="/sbus-and-brands"
+                    className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors"
+                  >
+                    Our Brands and SBUs
+                  </Link>
                 </div>
               </div>
             </div>
@@ -178,7 +222,6 @@ const Navbar = () => {
             >
               Contact Us
             </Link>
-            {/* News doesn't have a route in the list provided, leaving as # for now */}
             <a
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-cyan-400 transition-colors font-medium"
               href="#"
@@ -187,27 +230,256 @@ const Navbar = () => {
             </a>
           </nav>
 
-          {/* ACTION BUTTONS */}
+          {/* DESKTOP ACTION BUTTONS */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            <a
               className="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
-              to="/contact"
+              href="mailto:cyber@aajimatics.com"
             >
               Get Started
-            </Link>
-            <Link
+            </a>
+            <a
               className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-5 py-2.5 rounded-lg text-sm font-medium border border-gray-300 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-              to="/contact"
+              href="mailto:cyber@aajimatics.com"
             >
               Talk to an Expert
-            </Link>
+            </a>
           </div>
 
-          {/* MOBILE MENU TOGGLE */}
+          {/* ================= MOBILE MENU TOGGLE ================= */}
           <div className="md:hidden">
-            <button className="text-gray-700 dark:text-gray-300">
-              <span className="material-icons-outlined">menu</span>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 dark:text-gray-300 p-2 focus:outline-none"
+            >
+              <span className="material-icons-outlined text-3xl">
+                {isOpen ? "close" : "menu"}
+              </span>
             </button>
+          </div>
+        </div>
+      </div>
+
+      {/* ================= MOBILE MENU DRAWER ================= */}
+      <div
+        className={`md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 pt-4 pb-8 space-y-2 h-[calc(100vh-5rem)] overflow-y-auto">
+          <Link
+            to="/"
+            className="text-lg font-semibold text-gray-800 dark:text-white py-2 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+          >
+            Home
+          </Link>
+
+          {/* --- Mobile Accordion 1: Who We Are --- */}
+          <div>
+            <button
+              onClick={() => toggleTop("who")}
+              className="text-lg font-semibold text-gray-800 dark:text-white py-2 hover:text-primary dark:hover:text-cyan-400 transition-colors flex items-center justify-between w-full"
+            >
+              Who We Are
+              <span
+                className={`material-icons-outlined text-sm transition-transform ${
+                  activeTop === "who" ? "rotate-180" : ""
+                }`}
+              >
+                expand_more
+              </span>
+            </button>
+            {activeTop === "who" && (
+              <div className="pl-4 space-y-2 border-l-2 border-gray-100 dark:border-gray-700 ml-2 mt-2">
+                <Link
+                  to="/our-partners"
+                  className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+                >
+                  Our Partners
+                </Link>
+                <Link
+                  to="/clientele"
+                  className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+                >
+                  Clientele
+                </Link>
+                <Link
+                  to="/about"
+                  className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+                >
+                  About Us
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* --- Mobile Accordion 2: Explore Aajimatics --- */}
+          <div>
+            <button
+              onClick={() => toggleTop("explore")}
+              className="text-lg font-semibold text-gray-800 dark:text-white py-2 hover:text-primary dark:hover:text-cyan-400 transition-colors flex items-center justify-between w-full"
+            >
+              Explore Aajimatics
+              <span
+                className={`material-icons-outlined text-sm transition-transform ${
+                  activeTop === "explore" ? "rotate-180" : ""
+                }`}
+              >
+                expand_more
+              </span>
+            </button>
+
+            {activeTop === "explore" && (
+              <div className="pl-4 space-y-2 border-l-2 border-gray-100 dark:border-gray-700 ml-2 mt-2">
+                <Link
+                  to="/bespoke-solutions"
+                  className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+                >
+                  BeSpoke Solutions
+                </Link>
+
+                {/* Level 2 Nested Accordion: Disruptive Technologies */}
+                <div>
+                  <button
+                    onClick={() => toggleExploreChild("disruptive")}
+                    className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors flex items-center justify-between w-full"
+                  >
+                    Disruptive Technologies
+                    <span
+                      className={`material-icons-outlined text-sm transition-transform ${
+                        activeExploreChild === "disruptive" ? "rotate-90" : ""
+                      }`}
+                    >
+                      chevron_right
+                    </span>
+                  </button>
+                  {/* Level 3 Items */}
+                  {activeExploreChild === "disruptive" && (
+                    <div className="pl-4 space-y-2 border-l-2 border-gray-100 dark:border-gray-700 ml-2 mt-2">
+                      <Link
+                        to="/cybersecurity"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm"
+                      >
+                        Cybersecurity
+                      </Link>
+                      <Link
+                        to="/cyber-insurance"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm"
+                      >
+                        Cyber Insurance
+                      </Link>
+                      <Link
+                        to="/gov-tech"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm"
+                      >
+                        GovTech
+                      </Link>
+                      <Link
+                        to="/data-and-ai"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm"
+                      >
+                        Data & AI
+                      </Link>
+                      <Link
+                        to="/distributed-ledger-technology"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm"
+                      >
+                        DLT
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link
+                  to="/digital-transformation"
+                  className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+                >
+                  Digital Transformation
+                </Link>
+
+                {/* Level 2 Nested Accordion: Financial Services */}
+                <div>
+                  <button
+                    onClick={() => toggleExploreChild("fintech")}
+                    className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors flex items-center justify-between w-full text-left"
+                  >
+                    <span className="pr-2">Tech for Financial Services</span>
+                    <span
+                      className={`material-icons-outlined text-sm transition-transform ${
+                        activeExploreChild === "fintech" ? "rotate-90" : ""
+                      }`}
+                    >
+                      chevron_right
+                    </span>
+                  </button>
+                  {/* Level 3 Items */}
+                  {activeExploreChild === "fintech" && (
+                    <div className="pl-4 space-y-2 border-l-2 border-gray-100 dark:border-gray-700 ml-2 mt-2">
+                      <Link
+                        to="/tech-for-financial-services"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm font-semibold"
+                      >
+                        Overview
+                      </Link>
+                      <Link
+                        to="/insurance"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm"
+                      >
+                        Insurance
+                      </Link>
+                      <Link
+                        to="/micro-finance-banks"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm"
+                      >
+                        MFBs
+                      </Link>
+                      <Link
+                        to="/pension"
+                        className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block text-sm"
+                      >
+                        Pension
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link
+                  to="/sbus-and-brands"
+                  className="text-base text-gray-600 dark:text-gray-400 py-1 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+                >
+                  Our Brands and SBUs
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link
+            to="/contact"
+            className="text-lg font-semibold text-gray-800 dark:text-white py-2 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+          >
+            Contact Us
+          </Link>
+          <a
+            href="#"
+            className="text-lg font-semibold text-gray-800 dark:text-white py-2 hover:text-primary dark:hover:text-cyan-400 transition-colors block"
+          >
+            News
+          </a>
+
+          {/* Mobile Buttons */}
+          <div className="pt-6 space-y-3">
+            <a
+              href="mailto:cyber@aajimatics.com"
+              className="block w-full text-center bg-primary text-white px-5 py-3 rounded-lg font-medium"
+            >
+              Get Started
+            </a>
+            <a
+              href="mailto:cyber@aajimatics.com"
+              className="block w-full text-center bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-gray-600"
+            >
+              Talk to an Expert
+            </a>
           </div>
         </div>
       </div>

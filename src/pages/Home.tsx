@@ -36,13 +36,13 @@ const Home = () => {
           <div className="mt-10 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
               className="bg-light-blue text-white font-bold px-8 py-3 rounded-lg text-base hover:bg-primary duration-200"
-              href="#"
+              href="mailto:cyber@aajimatics.com"
             >
               Get Started
             </a>
             <a
               className="bg-white backdrop-blur-sm text-black font-bold px-8 py-3 rounded-lg text-base hover:bg-white/70 duration-200"
-              href="#"
+              href="mailto:cyber@aajimatics.com"
             >
               Talk to an Expert
             </a>
@@ -223,7 +223,7 @@ const Home = () => {
                   </p>
                   <a
                     className="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-                    href="#"
+                    href="/careers"
                   >
                     Explore roles →
                   </a>

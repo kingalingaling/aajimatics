@@ -15,6 +15,8 @@ import Insurance from "./pages/Insurance";
 import Microfinance from "./pages/Microfinance";
 import Pension from "./pages/Pension";
 import FinancialServices from "./pages/FinancialServices";
+import AboutUs from "./pages/AboutUs";
+import Careers from "./pages/Careers";
 
 export const routes = createBrowserRouter([
   {
@@ -80,5 +82,13 @@ export const routes = createBrowserRouter([
   {
     path: "/tech-for-financial-services",
     element: <FinancialServices />, 
+  },
+  {
+    path: "/about",
+    element: <AboutUs />, 
+  },
+  {
+    path: "/careers",
+    element: <Careers />, 
   },
 ]);
