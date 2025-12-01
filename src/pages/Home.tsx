@@ -9,6 +9,7 @@ import Partner from "../components/Partner";
 import Solution from "../components/Solution";
 import { SITE_DATA } from "../utilities/siteData";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -221,12 +222,12 @@ const Home = () => {
                     We're always looking for passionate minds in cybersecurity,
                     cloud engineering, software development, and data science.
                   </p>
-                  <a
+                  <Link
                     className="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-                    href="/careers"
+                    to="/careers"
                   >
                     Explore roles →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
