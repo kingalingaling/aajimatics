@@ -97,10 +97,20 @@ const ContactUs = () => {
                     <h3 className="font-semibold text-white text-lg">
                       Address
                     </h3>
-                    <p className="text-gray-300 mt-1 leading-relaxed max-w-xs">
+                    <p className="text-gray-300 mt-1 font-black leading-relaxed max-w-xs">
+                      CANADA
+                    </p>
+                    <p className="text-gray-300 mt-0.5 leading-relaxed max-w-xs">
                       McMaster Innovation Park, <br />
                       305-175 Longwood Rd South. <br />
                       Hamilton, ON L8P 0A1.
+                    </p>
+                    <p className="text-gray-300 font-black mt-2 leading-relaxed max-w-xs">
+                      NIGERIA
+                    </p>
+                    <p className="text-gray-300 mt-0.5 leading-relaxed max-w-xs">
+                      Liaison Office <br />
+                      Victoria Island, Lagos.
                     </p>
                   </div>
                 </div>
@@ -108,25 +118,25 @@ const ContactUs = () => {
 
               {/* Flags Section */}
               <div className="mt-8 flex items-center space-x-6">
-                <div className="bg-white/10 p-2 rounded-full backdrop-blur-sm">
+                <div className="bg-white/10 p-2 rounded-xl backdrop-blur-sm">
                   <img
                     src={canadaFlag}
                     alt="Canada"
-                    className="w-8 h-8 object-contain"
+                    className="w-8 h-8 object-contain rounded-lg"
                   />
                 </div>
-                <div className="bg-white/10 p-2 rounded-full backdrop-blur-sm">
+                <div className="bg-white/10 p-2 rounded-xl backdrop-blur-sm">
                   <img
                     src={nigeriaFlag}
                     alt="Nigeria"
-                    className="w-8 h-8 object-contain"
+                    className="w-8 h-8 object-contain rounded-lg"
                   />
                 </div>
-                <div className="bg-white/10 p-2 rounded-full backdrop-blur-sm">
+                <div className="bg-white/10 p-2 rounded-xl backdrop-blur-sm">
                   <img
                     src={franceFlag}
                     alt="France"
-                    className="w-8 h-8 object-contain"
+                    className="w-8 h-8 object-contain rounded-lg"
                   />
                 </div>
               </div>

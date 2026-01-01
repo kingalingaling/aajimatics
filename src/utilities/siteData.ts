@@ -61,7 +61,7 @@ export const SITE_DATA = {
         "DevSecOps Integration",
         "PCI-DSS",
         "ISMS",
-        "ISO 2700, ISO 27032 Implementation & Audit",
+        "ISO 27001, ISO 27032 Implementation & Audit",
       ],
     },
     {
@@ -239,6 +239,21 @@ export const SITE_DATA = {
       name:"FGI",
       logo: "/assets/images/clients/fgi.jpg"
     },
+    {
+      id: "cl12",
+      name:"SBG",
+      logo: "/assets/images/clients/sbg.png"
+    },
+    {
+      id: "cl13",
+      name:"NLIP",
+      logo: "/assets/images/clients/nlip.png"
+    },
+    {
+      id: "cl14",
+      name:"SBG",
+      logo: "/assets/images/clients/solarin.jpg"
+    },
   ],
   brands:[
     {
@@ -280,6 +295,11 @@ export const SITE_DATA = {
       id: "br8",
       name:"Aijilytics",
       logo: "/assets/images/brands/aijilytics.jpg"
+    },
+    {
+      id: "br9",
+      name:"SEDOCS",
+      logo: "/assets/images/brands/sedocs.png"
     }
   ]
 

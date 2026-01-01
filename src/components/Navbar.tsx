@@ -87,6 +87,12 @@ const Navbar: React.FC = () => {
                     Clientele
                   </Link>
                   <Link
+                    to="/sbus-and-brands"
+                    className="block px-4 py-3 rounded-lg hover:bg-gray-50 text-sm text-gray-700 hover:text-primary transition-colors"
+                  >
+                    Our SBUs and Brands
+                  </Link>
+                  <Link
                     to="/about"
                     className="block px-4 py-3 rounded-lg hover:bg-gray-50 text-sm text-gray-700 hover:text-primary transition-colors"
                   >
@@ -155,7 +161,7 @@ const Navbar: React.FC = () => {
                           to="/distributed-ledger-technology"
                           className="block px-4 py-3 rounded-lg hover:bg-gray-50 text-sm text-gray-700 hover:text-primary transition-colors"
                         >
-                          DLT
+                          Distributed Ledger Technology
                         </Link>
                       </div>
                     </div>
@@ -205,13 +211,6 @@ const Navbar: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
-                  <Link
-                    to="/sbus-and-brands"
-                    className="block px-4 py-3 rounded-lg hover:bg-gray-50 text-sm text-gray-700 hover:text-primary transition-colors"
-                  >
-                    Our Brands and SBUs
-                  </Link>
                 </div>
               </div>
             </div>
@@ -234,13 +233,13 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a
               className="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
-              href="mailto:cyber@aajimatics.com"
+              href="#"
             >
               Get Started
             </a>
             <a
               className="bg-gray-100 text-gray-800 px-5 py-2.5 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-200 transition-colors"
-              href="mailto:cyber@aajimatics.com"
+              href="#"
             >
               Talk to an Expert
             </a>
@@ -358,33 +357,33 @@ const Navbar: React.FC = () => {
                     <div className="pl-4 space-y-2 border-l-2 border-gray-100 ml-2 mt-2">
                       <Link
                         to="/cybersecurity"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block"
                       >
                         Cybersecurity
                       </Link>
                       <Link
                         to="/cyber-insurance"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block"
                       >
                         Cyber Insurance
                       </Link>
                       <Link
                         to="/gov-tech"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block"
                       >
                         GovTech
                       </Link>
                       <Link
                         to="/data-and-ai"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block"
                       >
                         Data & AI
                       </Link>
                       <Link
                         to="/distributed-ledger-technology"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block"
                       >
-                        DLT
+                        Distributed Ledger Technology
                       </Link>
                     </div>
                   )}
@@ -417,25 +416,25 @@ const Navbar: React.FC = () => {
                     <div className="pl-4 space-y-2 border-l-2 border-gray-100 ml-2 mt-2">
                       <Link
                         to="/tech-for-financial-services"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm font-semibold"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block font-semibold"
                       >
                         Overview
                       </Link>
                       <Link
                         to="/insurance"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block"
                       >
                         Insurance
                       </Link>
                       <Link
                         to="/micro-finance-banks"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block "
                       >
                         MFBs
                       </Link>
                       <Link
                         to="/pension"
-                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block text-sm"
+                        className="text-base text-gray-600 py-1 hover:text-primary transition-colors block"
                       >
                         Pension
                       </Link>
@@ -469,14 +468,14 @@ const Navbar: React.FC = () => {
           {/* Mobile Buttons */}
           <div className="pt-6 space-y-3">
             <a
-              href="mailto:cyber@aajimatics.com"
+              href="#"
               className="block w-full text-center bg-primary text-white px-5 py-3 rounded-lg font-medium"
             >
               Get Started
             </a>
             <a
               href="#"
-              className="block w-full text-center bg-gray-100 text-gray-800 px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-gray-600"
+              className="block w-full text-center bg-gray-100 text-gray-800 px-5 py-3 rounded-lg font-medium border border-gray-300"
             >
               Talk to an Expert
             </a>

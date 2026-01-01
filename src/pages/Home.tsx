@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     // Root container
-    <div className="font-display bg-background-light text-gray-800 ">
+    <div className="font-display bg-background-light text-gray-800 2xl:text-lg">
       <Navbar />
 
       {/* 1. HERO SECTION (Remains Opaque/Separate) */}
@@ -24,25 +24,25 @@ const Home = () => {
           <img src={heroImg} className="w-full h-full object-cover" alt="" />
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center h-[90vh] py-10 bg-black/60 ">
-          <h1 className="text-2xl md:text-3xl font-bold leading-tight max-w-4xl">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-start text-center h-[90vh] py-10 lg:pt-16 xl:pt-28 bg-light-blue/10 ">
+          <h1 className="text-2xl md:text-3xl 2xl:text-4xl font-bold leading-tight max-w-4xl">
             eHealth, eBusiness, eGovernment, <br />
             and eSecurity Technologies
           </h1>
-          <p className="mt-6 text-lg md:text-xl max-w-2xl text-gray-200">
+          <p className="mt-6 text-lg md:text-xl 2xl:text-3xl max-w-2xl lg:max-w-3xl 2xl:max-w-7xl text-gray-200">
             We empower organizations with secure, compliant, and transformative
-            technology solutions—bridging the gap between innovation,
+            technology <br /> solutions—bridging the gap between innovation,
             governance, and resilience.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
-              className="bg-light-blue text-white font-bold px-8 py-3 rounded-lg text-base hover:bg-primary duration-200"
-              href="mailto:cyber@aajimatics.com"
+              className="bg-light-blue text-white font-bold px-8 py-3 rounded-lg text-base 2xl:text-xl hover:bg-primary duration-200"
+              href="#"
             >
               Get Started
             </a>
             <a
-              className="bg-white backdrop-blur-sm text-black font-bold px-8 py-3 rounded-lg text-base hover:bg-white/70 duration-200"
+              className="bg-white backdrop-blur-sm text-black font-bold px-8 py-3 rounded-lg text-base 2xl:text-xl hover:bg-white/70 duration-200"
               href="#"
             >
               Talk to an Expert
@@ -51,9 +51,9 @@ const Home = () => {
         </div>
 
         {/* TRAPEZOID DIVIDER */}
-        <div
+        {/* <div
           className="
-            w-full md:w-[50%] lg:w-[40%] mx-auto h-16 md:h-20 
+            w-full md:w-[50%] lg:w-[40%] mx-auto h-16 md:h-20
             bg-white
             absolute bottom-0 z-20 
             [clip-path:polygon(15%_0%,85%_0%,100%_100%,0%_100%)]
@@ -61,6 +61,37 @@ const Home = () => {
           "
         >
           Who We Are
+        </div> */}
+        <div
+          className="
+    w-full md:w-[50%] lg:w-[25%] mx-auto h-16 md:h-20 lg:h-24
+    absolute bottom-0 z-20 
+    flex justify-center items-center
+  "
+        >
+          {/* 1. The SVG Shape with straight top and tight shoulders */}
+          <svg
+            className="absolute inset-0 w-full h-full text-white"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            fill="currentColor"
+          >
+            {/* Path Breakdown:
+       M 0 100     -> Start Bottom Left
+       L 15 20     -> Line up slope to the shoulder start (x=15, y=20)
+       Q 20 0 25 0 -> Tight curve from shoulder to top (x=25, y=0)
+       L 75 0      -> Long STRAIGHT line across the top (from 25 to 75)
+       Q 80 0 85 20-> Tight curve down to right shoulder
+       L 100 100   -> Line to Bottom Right
+       Z
+    */}
+            <path d="M 0 100 L 15 20 Q 20 0 25 0 L 75 0 Q 80 0 85 20 L 100 100 Z" />
+          </svg>
+
+          {/* 2. The Text */}
+          <span className="relative z-10 text-primary font-bold text-xl md:text-2xl lg:text-3xl">
+            Who We Are
+          </span>
         </div>
       </section>
 
@@ -77,21 +108,21 @@ const Home = () => {
 
         {/* Glow 2: Middle Left (Red/Purple Gradient) */}
         <div
-          className="absolute top-[30%] left-0 -ml-[150px] w-[500px] h-[500px] rounded-full blur-[150px] opacity-30 pointer-events-none z-0"
+          className="absolute top-[55%] left-0 -ml-[150px] w-[700px] h-[700px] rounded-full blur-[150px] opacity-20 pointer-events-none z-0"
           style={{
             backgroundImage: "linear-gradient(to right, #EF4444, #9333EA)",
           }}
         />
 
         {/* Glow 3: Lower Right (Blue/Red Gradient) */}
-        <div
+        {/* <div
           className="absolute bottom-[5%] right-0 -mr-[100px] w-[600px] h-[600px] rounded-full blur-[200px] opacity-30 pointer-events-none z-0"
           style={{
             backgroundImage: "linear-gradient(to top left, #2563EB, #EF4444)",
           }}
-        />
+        /> */}
         <div
-          className="absolute bottom-0 right-0 w-[300px] h-[300px] rounded-full blur-[200px] opacity-30 pointer-events-none z-0"
+          className="absolute -bottom-7 right-0 w-[300px] h-[300px] rounded-full blur-[200px] opacity-30 pointer-events-none z-0"
           style={{
             backgroundImage: "linear-gradient(to top right, #E40613, #EF4444)",
           }}

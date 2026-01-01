@@ -3,7 +3,7 @@ const PartnerCard = ({ logo, name }:{ logo:string, name:string }) => (
     <img 
       src={logo} 
       alt={name || "Partner Logo"} 
-      className="max-w-full max-h-full object-contain" 
+      className={`max-w-full max-h-full object-cover ${name=="Uniswitch"?"w-full":""} `}
     />
   </div>
 );

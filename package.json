@@ -2,6 +2,7 @@
   "name": "aajimatics",
   "private": true,
   "version": "0.0.0",
+  "homepage": "http://aajimatics.com",
   "type": "module",
   "scripts": {
     "dev": "vite",

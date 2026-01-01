@@ -65,7 +65,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="font-display bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+    <div className="font-display bg-gray-50 min-h-screen flex flex-col">
       <Navbar />
 
       {/* Main Content Wrapper */}
@@ -93,10 +93,10 @@ const AboutUs = () => {
 
         {/* 2. LRC Leader in ePlatforms Section */}
         <div className="container mx-auto max-w-4xl mt-16 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
             LRC Leader in ePlatforms
           </h2>
-          <div className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed space-y-6">
+          <div className="text-gray-600 text-lg leading-relaxed space-y-6">
             <p>
               Incorporated in 2010, AAJIMATICS has been developing its
               electronic systems and solutions and is now providing technology
@@ -110,7 +110,7 @@ const AboutUs = () => {
               We leverage Informatics to enable Processes, Procedures,
               Organizations, and Entities to function Optimally.
             </p>
-            <p className="font-medium text-[#155e9e] dark:text-cyan-400">
+            <p className="font-medium text-[#155e9e]">
               Our current focus is on delivering eHealth | eBusiness | eSecurity
               technologies to a varied clientele in North America and emerging
               markets including Nigeria. 
@@ -120,13 +120,13 @@ const AboutUs = () => {
 
         {/* 3. Mission Statement Section */}
         {/* <div className="container mx-auto max-w-5xl mt-20">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 border-l-8 border-[#155e9e]">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-8">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-l-8 border-[#155e9e]">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
               Mission Statement
             </h2> */}
             
             {/* The Quote */}
-            {/* <blockquote className="text-xl md:text-2xl font-medium italic text-gray-700 dark:text-gray-200 mb-8 relative">
+            {/* <blockquote className="text-xl md:text-2xl font-medium italic text-gray-700 mb-8 relative">
               <span className="text-4xl text-gray-300 absolute -top-4 -left-2">“</span>
               To be the leading catalyst in the optimal adoption, implementation
               and utilization of eHealth applications by institutions involved
@@ -134,7 +134,7 @@ const AboutUs = () => {
               as Nigeria.
             </blockquote>
 
-            <div className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed space-y-4">
+            <div className="text-gray-600 text-lg leading-relaxed space-y-4">
               <p>
                 Effective healthcare delivery is critical for a population’s
                 overall health and economic sustainability. Leveraging academic

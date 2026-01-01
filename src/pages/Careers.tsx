@@ -45,11 +45,11 @@ const Careers = () => {
 
         {/* 3. Current Openings Status (Not Hiring) */}
         <div className="container mx-auto max-w-3xl mt-20">
-          <div className="bg-white rounded-2xl shadow-xl p-10 md:p-16 text-center border border-gray-100 dark:border-gray-700">
+          <div className="bg-white rounded-2xl shadow-xl p-10 md:p-16 text-center border border-gray-100 ">
             {/* Icon */}
             <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg
-                className="w-10 h-10 text-gray-500 dark:text-gray-300"
+                className="w-10 h-10 text-gray-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ const Careers = () => {
             </p>
 
             {/* Call to Action - Talent Pool 
-            <div className="bg-[#f0f9ff] p-6 rounded-xl border border-blue-100 dark:border-blue-900/30">
+            <div className="bg-[#f0f9ff] p-6 rounded-xl border border-blue-100 ">
               <h4 className="text-lg font-semibold text-[#155e9e] mb-2">
                 Don't wait for a posting
               </h4>

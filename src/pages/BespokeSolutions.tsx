@@ -54,7 +54,7 @@ const BespokeSolutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Card 1 */}
-            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-primary/10 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: Computer/Dashboard */}
                 <svg
@@ -77,7 +77,7 @@ const BespokeSolutions = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-primary/10 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: Security Shield */}
                 <svg
@@ -100,7 +100,7 @@ const BespokeSolutions = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-primary/10 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: API/Integration */}
                 <svg

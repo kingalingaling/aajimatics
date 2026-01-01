@@ -23,8 +23,8 @@ const CyberInsurance = () => {
             {/* Centered Title */}
             <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
               <img src={cidaLogo} className="h-[70px] w-auto mb-2" alt="" />
-              <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
-                Cyber Insurance (CIDA Platform)
+              <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight px-2 text-center">
+                Cyber Insurance
               </h1>
             </div>
           </div>
@@ -52,7 +52,7 @@ const CyberInsurance = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Card 1 */}
-            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-primary/10 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: Computer/Dashboard */}
                 <svg
@@ -75,7 +75,7 @@ const CyberInsurance = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-primary/10 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: Security Shield */}
                 <svg
@@ -98,7 +98,7 @@ const CyberInsurance = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-gray-200 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-primary/10 p-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
               <div className="shrink-0 bg-[#155e9e] p-3 rounded-full flex items-center justify-center">
                 {/* Icon: API/Integration */}
                 <svg
