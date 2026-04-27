@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
               <img
                 alt="Aajimatics Technologies logo"
                 className="h-10 w-auto"
-                src="/assets/logo.webp"
+                src="/assets/logo-mmx.png"
               />
             </Link>
           </div>

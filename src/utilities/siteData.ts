@@ -251,8 +251,13 @@ export const SITE_DATA = {
     },
     {
       id: "cl14",
-      name:"SBG",
+      name:"Solarin",
       logo: "/assets/images/clients/solarin.jpg"
+    },
+    {
+      id: "cl15",
+      name:"Tangerin",
+      logo: "/assets/images/clients/tangerin.svg"
     },
   ],
   brands:[

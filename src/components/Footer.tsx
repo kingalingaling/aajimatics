@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"; // 1. Import Link
 import compliance from "../assets/audit-compliance.png";
+import compliance2 from "../assets/comp-trustmark.jpg";
 import franceFlag from "../assets/france-flag.png";
 import canadaFlag from "../assets/canada-flag.png";
 import nigeriaFlag from "../assets/nigeria-flag.png";
@@ -16,11 +17,18 @@ const Footer = () => {
               className="h-10 mb-4"
               src="/assets/logo-white.png"
             />
-            <img
-              alt="NDPR Audit Compliant 2023 QR code badge"
-              className="w-32 h-auto mb-4"
-              src={compliance}
-            />
+            <div className="flex gap-x-3 items-center mb-4">
+              <img
+                alt="Compliance Trustmark 2023"
+                className="w-32 h-32"
+                src={compliance2}
+              />
+              <img
+                alt="NDPR Audit Compliant 2023 QR code badge"
+                className="w-32 h-32"
+                src={compliance}
+              />
+            </div>
             <div className="flex items-center space-x-2 mb-2">
               <img
                 alt="Canadian flag"
@@ -108,7 +116,10 @@ const Footer = () => {
             <h4 className="font-bold text-lg mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-gray-100">
               <li>
-                <Link className="hover:text-cyan-400 duration-100" to={"/about"}>
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to={"/about"}
+                >
                   About Us
                 </Link>
               </li>
@@ -136,7 +147,10 @@ const Footer = () => {
             <h4 className="font-bold text-lg mb-4">Legal &amp; Compliance</h4>
             <ul className="space-y-2 text-sm text-gray-100">
               <li>
-                <Link className="hover:text-cyan-400 duration-100" to="/privacy-policy">
+                <Link
+                  className="hover:text-cyan-400 duration-100"
+                  to="/privacy-policy"
+                >
                   Privacy Policy
                 </Link>
               </li>

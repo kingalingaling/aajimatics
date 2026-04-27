@@ -18,6 +18,7 @@ import FinancialServices from "./pages/FinancialServices";
 import AboutUs from "./pages/AboutUs";
 import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import WorkshopRegistration from "./pages/WorkshopRegistration";
 
 export const routes = createBrowserRouter([
   {
@@ -92,9 +93,12 @@ export const routes = createBrowserRouter([
     path: "/careers",
     element: <Careers />, 
   },
-  
   {
     path: "/privacy-policy",
     element: <PrivacyPolicy />, 
+  },
+  {
+    path: "/workshop",
+    element: <WorkshopRegistration />, 
   },
 ]);
