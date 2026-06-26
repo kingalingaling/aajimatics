@@ -165,7 +165,7 @@ const Footer = () => {
 
         {/* BOTTOM BAR */}
         <div className="mt-12 border-t border-white/20 pt-8 text-center lg:text-left flex flex-col lg:flex-row justify-between text-sm text-white">
-          <p>© 2025 Aajimatics. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Aajimatics. All rights reserved.</p>
           <p className="mb-2">
             Licensed under the Nigeria Data Protection Commission (NDPC).
           </p>

@@ -19,6 +19,7 @@ import AboutUs from "./pages/AboutUs";
 import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import WorkshopRegistration from "./pages/WorkshopRegistration";
+import PostSummitSurvey from "./pages/Survey";
 
 export const routes = createBrowserRouter([
   {
@@ -100,5 +101,9 @@ export const routes = createBrowserRouter([
   {
     path: "/workshop",
     element: <WorkshopRegistration />, 
+  },
+  {
+    path: "/workshop/survey",
+    element: <PostSummitSurvey />, 
   },
 ]);
