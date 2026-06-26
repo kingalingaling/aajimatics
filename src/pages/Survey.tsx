@@ -252,7 +252,7 @@ const PostSummitSurvey: React.FC = () => {
     const loadingToast = toast.loading("Submitting your snapshot...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/submit-survey", {
+      const response = await fetch("https://aajimatics-backend.onrender.com/api/submit-survey", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
