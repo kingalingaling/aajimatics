@@ -71,7 +71,7 @@ const ContactUs = () => {
                 {/* Address Item */}
                 <div className="flex items-start space-x-4">
                   {/* Icon */}
-                  <div className="mt-1 shrink-0">
+                  {/* <div className="mt-1 shrink-0">
                     <svg
                       className="w-6 h-6 text-gray-300"
                       fill="none"
@@ -91,9 +91,9 @@ const ContactUs = () => {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                  </div>
+                  </div> */}
                   {/* Text */}
-                  <div>
+                  {/* <div>
                     <h3 className="font-semibold text-white text-lg">
                       Address
                     </h3>
@@ -112,7 +112,7 @@ const ContactUs = () => {
                       Liaison Office <br />
                       Victoria Island, Lagos.
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

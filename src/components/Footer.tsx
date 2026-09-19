@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="text-white md:px-16 bg-linear-to-br from-[#15236B] via-[#0077E6] to-[#15236B] relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* LOGO & ADDRESS COLUMN */}
           <div className="col-span-1 md:col-span-1">
             <img
@@ -42,12 +42,12 @@ const Footer = () => {
               />
               <img alt="French flag" className="w-5 h-auto" src={franceFlag} />
             </div>
-            <p className="text-sm text-gray-100">
+            {/* <p className="text-sm text-gray-100">
               Aajimatics <br />
               McMaster Innovation Park <br />
               305-175 Longwood Rd South <br />
               Hamilton, ON L8P 0A1 <br /> Canada
-            </p>
+            </p> */}
           </div>
 
           {/* SERVICES COLUMN */}
