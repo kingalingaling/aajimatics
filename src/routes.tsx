@@ -20,6 +20,7 @@ import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import WorkshopRegistration from "./pages/WorkshopRegistration";
 import PostSummitSurvey from "./pages/Survey";
+import IcmrPreTrainingAssessment from "./pages/PreTraining";
 
 export const routes = createBrowserRouter([
   {
@@ -105,5 +106,9 @@ export const routes = createBrowserRouter([
   {
     path: "/workshop/survey",
     element: <PostSummitSurvey />, 
+  },
+  {
+    path: "/pre-training-assessment",
+    element: <IcmrPreTrainingAssessment />, 
   },
 ]);
